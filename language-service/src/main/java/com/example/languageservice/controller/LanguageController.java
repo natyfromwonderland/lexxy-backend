@@ -28,4 +28,10 @@ public class LanguageController {
     public LanguageDTO getById(@PathVariable("id") Long id) throws ParseException {
         return langService.getById(id);
     }
+
+    @GetMapping("/name/{name}")
+    @ResponseStatus(HttpStatus.OK)
+    public LanguageDTO getByName(@PathVariable("name") String name) throws ParseException {
+        return langService.getByName(name);
+    }
 }

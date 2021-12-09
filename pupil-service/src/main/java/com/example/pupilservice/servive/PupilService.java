@@ -121,7 +121,7 @@ public class PupilService {
 
     public LearningDTO createLearning(LearningDTO learningDTO) throws ParseException {
         if (learningRepository.findById(learningDTO.getId()).isPresent()
-        || !learningRepository.existsLearningByLangIdAndPupilId(learningDTO.getLangId(), learningDTO.getPupilId())) {
+        || learningRepository.existsLearningByLangIdAndPupilId(learningDTO.getLangId(), learningDTO.getPupilId())) {
             return convertLearningToDto(learningRepository.findById(learningDTO.getId()).get());
         } else {
             Learning newLearning = convertLearnToEntity(learningDTO);

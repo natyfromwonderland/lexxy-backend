@@ -39,6 +39,11 @@ public class LangService {
         }
     }
 
+    public LanguageDTO getByName(String name) {
+        Language language = languageRepository.findByName(name);
+        return convertToDto(language);
+    }
+
     public LanguageDTO convertToDto(Language language) {
         LanguageDTO languageDTO = modelMapper.map(language, LanguageDTO.class);
         return languageDTO;
