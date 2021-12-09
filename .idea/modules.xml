@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ApiGateway/ApiGateway.iml" filepath="$PROJECT_DIR$/ApiGateway/ApiGateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Lexxy.iml" filepath="$PROJECT_DIR$/.idea/Lexxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Discovery-Service/Server.iml" filepath="$PROJECT_DIR$/Discovery-Service/Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/group-service/group-service.iml" filepath="$PROJECT_DIR$/group-service/group-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/language-service/language-service.iml" filepath="$PROJECT_DIR$/language-service/language-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson-service/lesson-service.iml" filepath="$PROJECT_DIR$/lesson-service/lesson-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pupil-service/pupil-service.iml" filepath="$PROJECT_DIR$/pupil-service/pupil-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-service/shop-service.iml" filepath="$PROJECT_DIR$/shop-service/shop-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/teacher-service/teacher-service.iml" filepath="$PROJECT_DIR$/teacher-service/teacher-service.iml" />
+    </modules>
+  </component>
+</project>
