@@ -53,9 +53,9 @@ public class PupilController {
         return pupilService.getByEmail(email);
     }
 
-    @GetMapping("/alllangs/{email}")
+    @GetMapping(path ="/alllangs", params = {"email"})
     @ResponseStatus(HttpStatus.OK)
-    public List<LanguageDTO> getAllLangsByPupil(@PathVariable(name="email") String email)
+    public List<LanguageDTO> getAllLangsByPupil(@RequestParam(value = "email") String email)
     { return pupilService.getLangsByPupil(email); }
 
 
@@ -85,8 +85,8 @@ public class PupilController {
 
     @PostMapping("/lang/add")
     @ResponseStatus(HttpStatus.CREATED)
-    public LearningDTO addLang(@RequestBody LearningDTO learningDTO) throws ParseException {
-        return pupilService.createLearning(learningDTO);
+    public void addLang(@RequestBody LearningDTO learningDTO) throws ParseException {
+        pupilService.createLearning(learningDTO);
     }
 
     @DeleteMapping("/lang/remove/{id}")

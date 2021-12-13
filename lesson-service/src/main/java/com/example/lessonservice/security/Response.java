@@ -1,18 +1,15 @@
-package com.example.shopservice.dto;
+package com.example.lessonservice.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Lob;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class UpdateItemDTO {
-    private Long id;
-    private String name;
-    private double price;
+public class Response {
+    private String username;
+    private String password;
 }

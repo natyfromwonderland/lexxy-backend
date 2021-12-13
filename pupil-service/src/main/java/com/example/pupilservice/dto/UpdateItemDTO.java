@@ -12,6 +12,5 @@ import lombok.Setter;
 public class UpdateItemDTO {
     private Long id;
     private String name;
-    private byte[] content;
     private double price;
 }

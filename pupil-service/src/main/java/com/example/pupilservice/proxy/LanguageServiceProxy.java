@@ -15,8 +15,10 @@ public interface LanguageServiceProxy {
     @GetMapping("/app/lang")
     List<LanguageDTO> getAllLangs();
 
-
     @GetMapping("/app/lang/{id}")
     LanguageDTO getById(@PathVariable("id") Long id);
+
+    @GetMapping("app/lang/name/{name}")
+    LanguageDTO getByName(@PathVariable("name") String name);
 
 }

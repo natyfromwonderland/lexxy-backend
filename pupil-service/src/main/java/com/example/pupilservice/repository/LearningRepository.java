@@ -11,4 +11,5 @@ public interface LearningRepository extends JpaRepository<Learning, Long> {
 
     List<Learning> findByPupilId(Long pupilId);
     boolean existsLearningByLangIdAndPupilId (Long langId, Long pupilId);
+    void deleteByLangId(Long langId);
 }

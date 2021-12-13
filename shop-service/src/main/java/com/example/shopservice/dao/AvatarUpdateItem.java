@@ -16,20 +16,13 @@ public class AvatarUpdateItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Lob
-    private byte[] content;
     private String name;
-
     private double price;
 
-    public AvatarUpdateItem(byte[] content, String name, double price) {
-        this.content = content;
+    public AvatarUpdateItem(String name, double price) {
+
         this.name = name;
         this.price = price;
     }
 
-    public AvatarUpdateItem(byte[] content) {
-        this.content = content;
-    }
 }

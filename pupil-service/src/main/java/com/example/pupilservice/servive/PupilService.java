@@ -93,7 +93,8 @@ public class PupilService {
         }
     }
 
-      public void addCoins(String email, Long lessonId){
+    @Transactional
+    public void addCoins(String email, Long lessonId){
           Optional<Pupil> pupil = pupilRepository.findByEmail(email);
           LessonDTO lessonDTO = lessonServiceProxy.getById(lessonId);
           if (pupil.isPresent() && lessonDTO!= null) {
@@ -102,6 +103,7 @@ public class PupilService {
           }
       }
 
+    @Transactional
     public void deductCoins(String email, Long itemId){
         Optional<Pupil> pupil = pupilRepository.findByEmail(email);
         UpdateItemDTO updateItemDTO = shopServiceProxy.getById(itemId);
@@ -111,6 +113,7 @@ public class PupilService {
         }
     }
 
+    @Transactional
     public void updateLevel(String email){
         Optional<Pupil> pupil = pupilRepository.findByEmail(email);
         if (pupil.isPresent()) {
@@ -119,19 +122,18 @@ public class PupilService {
         }
     }
 
-    public LearningDTO createLearning(LearningDTO learningDTO) throws ParseException {
-        if (learningRepository.findById(learningDTO.getId()).isPresent()
-        || learningRepository.existsLearningByLangIdAndPupilId(learningDTO.getLangId(), learningDTO.getPupilId())) {
-            return convertLearningToDto(learningRepository.findById(learningDTO.getId()).get());
-        } else {
+    @Transactional
+    public void createLearning(LearningDTO learningDTO) throws ParseException {
+        if (!learningRepository.findById(learningDTO.getId()).isPresent()
+        && !learningRepository.existsLearningByLangIdAndPupilId(learningDTO.getLangId(), learningDTO.getPupilId())) {
             Learning newLearning = convertLearnToEntity(learningDTO);
-            newLearning = learningRepository.save(newLearning);
-            return convertLearningToDto(learningRepository.findById(newLearning.getId()).get());
+            learningRepository.save(newLearning);
         }
     }
 
+    @Transactional
     public void removeLearning(Long id){
-        learningRepository.deleteById(id);
+        learningRepository.deleteByLangId(id);
     }
 
     public List<LearningDTO> getAllLangs() {

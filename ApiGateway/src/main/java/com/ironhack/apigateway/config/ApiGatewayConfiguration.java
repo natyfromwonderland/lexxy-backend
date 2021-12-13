@@ -49,6 +49,10 @@ public class ApiGatewayConfiguration {
                         .uri("lb://LANGUAGE-SERVICE"))
                 .route(p -> p.path("/app/lang**")
                         .uri("lb://LANGUAGE-SERVICE"))
+                .route(p -> p.path("/app/lesson/**")
+                        .uri("lb://LESSON-SERVICE"))
+                .route(p -> p.path("/app/lesson**")
+                        .uri("lb://LESSON-SERVICE"))
                 .build();
     }
 }
