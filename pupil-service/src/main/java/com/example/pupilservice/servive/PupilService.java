@@ -94,11 +94,11 @@ public class PupilService {
     }
 
     @Transactional
-    public void addCoins(String email, Long lessonId){
+    public void addCoins(String email, double coins){
           Optional<Pupil> pupil = pupilRepository.findByEmail(email);
-          LessonDTO lessonDTO = lessonServiceProxy.getById(lessonId);
-          if (pupil.isPresent() && lessonDTO!= null) {
-               pupil.get().increaseCoins(lessonDTO.getPoints());
+//          LessonDTO lessonDTO = lessonServiceProxy.getById(lessonId);
+          if (pupil.isPresent() ) {
+               pupil.get().increaseCoins(coins);
                pupilRepository.save(pupil.get());
           }
       }

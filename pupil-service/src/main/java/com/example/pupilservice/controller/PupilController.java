@@ -67,8 +67,8 @@ public class PupilController {
 
     @PutMapping("/coins/add/{email}")
     @ResponseStatus(HttpStatus.OK)
-    public void addCoins(@PathVariable("email") String email, @RequestBody Long lessonId){
-        pupilService.addCoins(email, lessonId);
+    public void addCoins(@PathVariable("email") String email, @RequestBody double coins){
+        pupilService.addCoins(email, coins);
     }
 
     @PutMapping("/coins/deduct/{email}")

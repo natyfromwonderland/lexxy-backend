@@ -12,6 +12,7 @@ import java.util.List;
 
 @FeignClient("LANGUAGE-SERVICE")
 public interface LanguageServiceProxy {
+
     @GetMapping("/app/lang")
     List<LanguageDTO> getAllLangs();
 

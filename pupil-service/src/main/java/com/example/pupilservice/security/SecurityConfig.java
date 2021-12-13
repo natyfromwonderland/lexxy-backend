@@ -49,6 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable();
         http.authorizeRequests()
                 .mvcMatchers(HttpMethod.GET, "/app/**").permitAll()
                 .mvcMatchers(HttpMethod.POST, "/app/**").permitAll()
