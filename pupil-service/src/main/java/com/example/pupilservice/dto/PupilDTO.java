@@ -25,7 +25,7 @@ public class PupilDTO {
     private String email;
     private String username;
     private String avatarId;
-    private Integer level;
+    private double level;
     private double coins;
 
 

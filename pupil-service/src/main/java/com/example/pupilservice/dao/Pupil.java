@@ -30,7 +30,7 @@ public class Pupil {
     @JoinColumn(name = "avatarId")
     Avatar avatar;
 
-    private Integer level;
+    private double level;
     private double coins;
 
 
@@ -42,10 +42,7 @@ public class Pupil {
         this.coins = 0;
     }
 
-    public Integer updateLevel(){
-        if(this.level == null){
-            return this.level = 1;
-        }
+    public double updateLevel(){
         return this.level +=1;
     }
 
