@@ -17,6 +17,6 @@ public interface PupilRepository extends JpaRepository<Pupil, Long> {
 
     Optional<Pupil> findByEmail (String email);
 
-    @Query(value = "SELECT * FROM pupil p ORDER BY p.coins LIMIT 10", nativeQuery = true)
+    @Query(value = "SELECT * FROM pupil p ORDER BY p.coins DESC LIMIT 10", nativeQuery = true)
     List<Pupil> findTopTen();
 }

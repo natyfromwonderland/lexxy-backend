@@ -42,8 +42,10 @@ public class Pupil {
         this.coins = 0;
     }
 
-
     public Integer updateLevel(){
+        if(this.level == null){
+            return this.level = 1;
+        }
         return this.level +=1;
     }
 
