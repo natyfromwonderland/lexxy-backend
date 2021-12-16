@@ -29,12 +29,12 @@
   Database Setup
   ===========================
   
-  create database lexxy;
+  ```create database lexxy;
   
   use lexxy;
   
   CREATE USER 'ironhacker'@'localhost' IDENTIFIED BY '1r0nH@ck3r';
 
-  GRANT ALL PRIVILEGES ON \*.\* TO 'ironhacker'@'localhost';
+  GRANT ALL PRIVILEGES ON *.* TO 'ironhacker'@'localhost';
 
-  FLUSH PRIVILEGES;
+  FLUSH PRIVILEGES;```
