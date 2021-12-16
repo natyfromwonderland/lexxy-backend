@@ -43,6 +43,7 @@
   GRANT ALL PRIVILEGES ON *.* TO 'ironhacker'@'localhost';
 
   FLUSH PRIVILEGES;
+  ```
   
   
   You might also wish to populate the following after running the microservices, so the front end has got some data to play with:
@@ -64,5 +65,6 @@ INSERT INTO avatar_update_item ( name, price) VALUES
 ('To infinity and beyond', 10),
 ('Music lover', 5),
 ('Simply cute', 5);
+```
 
 
