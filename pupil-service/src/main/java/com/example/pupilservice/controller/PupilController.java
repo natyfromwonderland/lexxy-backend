@@ -41,11 +41,6 @@ public class PupilController {
     @ResponseStatus(HttpStatus.OK)
     public List<PupilDTO> getTopTen() { return pupilService.getTopTen(); }
 
-//    @GetMapping("/{id}")
-//    @ResponseStatus(HttpStatus.OK)
-//    public PupilDTO getById(@PathVariable("id") Long id) throws ParseException {
-//        return pupilService.getById(id);
-//    }
 
     @GetMapping("/{email}")
     @ResponseStatus(HttpStatus.OK)
@@ -59,9 +54,14 @@ public class PupilController {
     { return pupilService.getLangsByPupil(email); }
 
 
-    @GetMapping(value = "/avatar/{avatarId}", produces = MediaType.IMAGE_JPEG_VALUE)
-    Resource downloadImage(@PathVariable(name="avatarId") Long avatarId) {
-        return pupilService.getImage(avatarId);
+//    @GetMapping(value = "/avatar/{avatarId}", produces = MediaType.IMAGE_JPEG_VALUE)
+//    Resource downloadImage(@PathVariable(name="avatarId") Long avatarId) {
+//        return pupilService.getImage(avatarId);
+//    }
+
+    @GetMapping("/avatar/{avatarId}")
+    String downloadImage(@PathVariable(name="avatarId") Long avatarId) {
+        return pupilService.getImageName(avatarId);
     }
 
 
@@ -101,11 +101,15 @@ public class PupilController {
     }
 
 
-    @PostMapping("/{email}/image")
-    public Long uploadImage(@PathVariable(name="email") String email, @RequestParam MultipartFile multipartImage) throws Exception {
-        return pupilService.storeImage(email, multipartImage);
-    }
+//    @PostMapping("/{email}/image")
+//    public Long uploadImage(@PathVariable(name="email") String email, @RequestParam MultipartFile multipartImage) throws Exception {
+//        return pupilService.storeImage(email, multipartImage);
+//    }
 
+    @PostMapping("/{email}/image")
+    public Long uploadImage(@PathVariable(name="email") String email, @RequestBody String name) throws Exception {
+        return pupilService.storeImageUrl(email, name);
+    }
 
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable("id") Long id) {

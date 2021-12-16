@@ -217,12 +217,26 @@ public class PupilService {
         return pupilRepository.save(pupil.get()).getAvatar().getId();
     }
 
+    public Long storeImageUrl(String email, String name) throws IOException {
+        Avatar avatar = new Avatar();
+        avatar.setName(name);
+        avatarRepository.save(avatar);
+        Optional<Pupil> pupil = pupilRepository.findByEmail(email);
+        pupil.get().setAvatar(avatar);
+        return pupilRepository.save(pupil.get()).getAvatar().getId();
+    }
+
     public Resource getImage(Long imageId) {
 
         byte[] image = avatarRepository.findById(imageId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND))
                 .getContent();
         return new ByteArrayResource(image);
+    }
+
+    public String getImageName(Long imageId){
+        String name = avatarRepository.findById(imageId).get().getName();
+        return name;
     }
 
 }

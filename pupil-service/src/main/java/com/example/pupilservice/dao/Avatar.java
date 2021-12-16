@@ -20,4 +20,8 @@ public class Avatar {
     @Lob
     private byte[] content;
     private String name;
+
+    public Avatar(String name) {
+        this.name = name;
+    }
 }
