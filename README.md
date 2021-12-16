@@ -34,7 +34,8 @@
   Database Setup
   ===========================
   
-  ```create database lexxy;
+  ```
+  create database lexxy;
   
   use lexxy;
   
@@ -49,7 +50,8 @@
   You might also wish to populate the following after running the microservices, so the front end has got some data to play with:
   
   
-  ```INSERT INTO language ( name) VALUES
+  ```
+ INSERT INTO language ( name) VALUES
 ('French'),
 ('Spanish');
 
