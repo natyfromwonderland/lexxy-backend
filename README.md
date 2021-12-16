@@ -1,4 +1,4 @@
-<img alt="project logo" src="https://github.com/natyfromwonderland/Lexxy-learning-app/blob/master/cover-01.png">
+<img alt="project logo" src="https://github.com/natyfromwonderland/lexxy-backend/blob/master/cover-01.png">
 
 <br />
 
