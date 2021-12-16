@@ -17,8 +17,8 @@ public class Avatar {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Lob
-    private byte[] content;
+//    @Lob
+//    private byte[] content;
     private String name;
 
     public Avatar(String name) {
