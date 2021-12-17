@@ -3,7 +3,7 @@
 <br />
 
   <p align="center">
-    Learning app created by:
+    Learning app concept created by:
     <br />
     <a href="https://github.com/natyfromwonderland"><strong>Natalia Shilyaeva</strong></a>
     
