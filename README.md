@@ -25,6 +25,15 @@
   
   The project architecture was originally agreed to be the following, althought it evolved a bit following the evolving complexity:
   
+  <img alt="uml diagram" src="https://github.com/natyfromwonderland/lexxy-backend/blob/master/uml.png">
+  
+  
+  Project Tech
+  ===========================
+  
+  Software used: IntelliJ, VS code, Figma, Adobe Illustrator, MySQL Workbench.
+  Programmed using Java, SQL, Typescript, HTML and CSS.
+  
   Front end
   ===========================
   
@@ -69,4 +78,27 @@ INSERT INTO avatar_update_item ( name, price) VALUES
 ('Simply cute', 5);
 ```
 
+it is recommended o run microservices starting with the discovery-service.
 
+Security
+===========================
+
+The project implements auth0 security, which is set up on the front end and all data bearing services.
+
+ <img alt="login page screen" src="https://github.com/natyfromwonderland/lexxy-backend/blob/master/login.png">
+ 
+
+App Screens
+===========================
+
+The look and feel is presented below. All illustration in the app including the logo (apart from icons and fonts) is my own illustration and is, therefore, subject to copyright. Please, seek permission if you wish to use it. As this is a learning app, mock content has been created for the demonstration purposes.
+
+
+ <img alt="welcome page" src="https://github.com/natyfromwonderland/lexxy-backend/blob/master/hero.png">
+ 
+ <img alt="lesson page" src="https://github.com/natyfromwonderland/lexxy-backend/blob/master/lesson.png">
+ 
+ <img alt="shop page" src="https://github.com/natyfromwonderland/lexxy-backend/blob/master/shop.png">
+ 
+ #Thank you!#
+ 
