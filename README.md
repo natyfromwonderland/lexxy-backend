@@ -23,7 +23,7 @@
   Project Architecture
   ===========================
   
-  The project architecture was originally agreed to be the following, althought it evolved a bit following the evolving complexity:
+  The project architecture is replicated below (it did suffer a few alterations):
   
   <img alt="uml diagram" src="https://github.com/natyfromwonderland/lexxy-backend/blob/master/uml.png">
   
