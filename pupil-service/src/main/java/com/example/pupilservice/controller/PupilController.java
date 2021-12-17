@@ -1,5 +1,6 @@
 package com.example.pupilservice.controller;
 
+import com.example.pupilservice.dto.AvatarDTO;
 import com.example.pupilservice.dto.LanguageDTO;
 import com.example.pupilservice.dto.LearningDTO;
 import com.example.pupilservice.dto.PupilDTO;
@@ -54,14 +55,9 @@ public class PupilController {
     { return pupilService.getLangsByPupil(email); }
 
 
-//    @GetMapping(value = "/avatar/{avatarId}", produces = MediaType.IMAGE_JPEG_VALUE)
-//    Resource downloadImage(@PathVariable(name="avatarId") Long avatarId) {
-//        return pupilService.getImage(avatarId);
-//    }
-
     @GetMapping("/avatar/{avatarId}")
-    String downloadImage(@PathVariable(name="avatarId") Long avatarId) {
-        return pupilService.getImageName(avatarId);
+    AvatarDTO downloadImage(@PathVariable(name="avatarId") Long avatarId) {
+        return pupilService.getAvatar(avatarId);
     }
 
 
@@ -100,11 +96,6 @@ public class PupilController {
         return pupilService.createPupil(pupilDTO);
     }
 
-
-//    @PostMapping("/{email}/image")
-//    public Long uploadImage(@PathVariable(name="email") String email, @RequestParam MultipartFile multipartImage) throws Exception {
-//        return pupilService.storeImage(email, multipartImage);
-//    }
 
     @PostMapping("/{email}/image")
     public Long uploadImage(@PathVariable(name="email") String email, @RequestBody String name) throws Exception {

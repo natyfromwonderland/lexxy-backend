@@ -1,25 +1,20 @@
-package com.example.pupilservice.dao;
+package com.example.pupilservice.dto;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
-
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Avatar {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class AvatarDTO {
     private Long id;
-
     private String name;
 
-    public Avatar(String name) {
+    public AvatarDTO(String name) {
         this.name = name;
     }
 }

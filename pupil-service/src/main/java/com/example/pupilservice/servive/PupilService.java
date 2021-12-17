@@ -215,9 +215,18 @@ public class PupilService {
     }
 
 
-    public String getImageName(Long imageId){
-        String name = avatarRepository.findById(imageId).get().getName();
-        return name;
+    public AvatarDTO getAvatar(Long imageId){
+        Optional<Avatar> avatar = avatarRepository.findById(imageId);
+        if (avatar.isPresent()) {
+            return convertAvatarToDto(avatar.get());
+        } else {
+            return null;
+        }
+    }
+
+    public AvatarDTO convertAvatarToDto(Avatar avatar) {
+        AvatarDTO avatarDTO = modelMapper.map(avatar, AvatarDTO.class);
+        return avatarDTO;
     }
 
 }
