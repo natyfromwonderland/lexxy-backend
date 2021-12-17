@@ -79,7 +79,7 @@ INSERT INTO avatar_update_item ( name, price) VALUES
 ('Simply cute', 5);
 ```
 
-It is recommended to run microservices starting with the discovery-service to avoid disappointment and random errors. Please, consider invalidating cache in IntelliJ if you still encounter errors.
+It is recommended to run microservices starting with the discovery-service to avoid disappointment and random errors. Please, consider invalidating cache in IntelliJ if you still encounter errors. Please, note that some functionality of the shop-service is still in development.
 
 Security
 ===========================
