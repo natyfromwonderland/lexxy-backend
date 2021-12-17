@@ -32,6 +32,7 @@
   ===========================
   
   Software used: IntelliJ, VS code, Figma, Adobe Illustrator, MySQL Workbench.
+  
   Programmed using Java, SQL, Typescript, HTML and CSS.
   
   Front end
