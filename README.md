@@ -91,7 +91,9 @@ The project implements auth0 security, which is set up on the front end and all 
 App Screens
 ===========================
 
-The look and feel is presented below. All illustration in the app including the logo (apart from icons and fonts) is my own illustration and is, therefore, subject to copyright. Please, seek permission if you wish to use it. As this is a learning app, mock content has been created for the demonstration purposes.
+The look and feel is presented below. 
+
+As this is a learning app, mock content has been created for the demonstration purposes.
 
 
  <img alt="welcome page" src="https://github.com/natyfromwonderland/lexxy-backend/blob/master/hero.png">
@@ -100,5 +102,11 @@ The look and feel is presented below. All illustration in the app including the 
  
  <img alt="shop page" src="https://github.com/natyfromwonderland/lexxy-backend/blob/master/shop.png">
  
- #Thank you!#
+Thank you!
+===========================
+
+
+Copyright notice
+===========================
  
+All illustration in the app including the logo (apart from icons and fonts) is my own illustration and is, therefore, subject to copyright. Whilst feedback and contribution is very welcome, should you wish to use any of the illustrations outside this project, please, contact me to discuss.
