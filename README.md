@@ -79,12 +79,12 @@ INSERT INTO avatar_update_item ( name, price) VALUES
 ('Simply cute', 5);
 ```
 
-it is recommended o run microservices starting with the discovery-service.
+It is recommended to run microservices starting with the discovery-service to avoid disappointment and random errors. Please, consider invalidating cache in IntelliJ if you still encounter errors.
 
 Security
 ===========================
 
-The project implements auth0 security, which is set up on the front end and all data bearing services.
+The project implements auth0 security, which is set up on the front end and all data bearing services. Up to you if you want to verify the password (pretty cool though!)
 
  <img alt="login page screen" src="https://github.com/natyfromwonderland/lexxy-backend/blob/master/login.png">
  
